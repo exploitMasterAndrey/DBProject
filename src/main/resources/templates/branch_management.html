@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление филиалами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .container{
+            box-sizing: content-box;
+            background-color: rgba(255,255,255,0.13);
+
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 35px 35px;
+
+            margin-bottom: 40px;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <center><h5>Управление филиалами</h5></center>
+    <div class="card">
+        <h5 class="card-header">Удаление</h5>
+        <div class="card-body">
+            <p class="card-text">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">ID филиала</span>
+                <input id="deleteBranchInput" type="text" class="form-control" placeholder="id" aria-describedby="addon-wrapping">
+            </div>
+            </p>
+            <a class="btn btn-danger" onclick="delete_branch()">Удалить</a>
+        </div>
+    </div><br>
+
+    <div class="card">
+        <h5 class="card-header">Добавление</h5>
+        <div class="card-body">
+            <p class="card-text">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping1">Специализация</span>
+                <input id="specializationInput" type="text" class="form-control" placeholder="кузовные работы" aria-describedby="addon-wrapping1">
+            </div><br>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping2">Адрес</span>
+                <input id="addressInput" type="text" class="form-control" placeholder="г.Москва ул.Пушкина д.Колотушкина" aria-describedby="addon-wrapping2">
+            </div><br>
+            </p>
+            <a class="btn btn-success" onclick="add_branch()">Добавить</a>
+        </div>
+    </div><br>
+
+    <div class="card">
+        <h5 class="card-header">Обновление</h5>
+        <div class="card-body">
+            <p class="card-text">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping5">ID филиала</span>
+                <input id="branchIDInput" type="text" class="form-control" placeholder="id" aria-describedby="addon-wrapping5">
+            </div><br>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping6">Специализация</span>
+                <input id="newSpecializationInput" type="text" class="form-control" placeholder="кузовные работы" aria-describedby="addon-wrapping6">
+            </div><br>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping7">Адрес</span>
+                <input id="newAddressInput" type="text" class="form-control" placeholder="г.Москва ул.Пушкина д.Колотушкина" aria-describedby="addon-wrapping7">
+            </div><br>
+            </p>
+            <a class="btn btn-warning" onclick="update_branch()">Обновить</a>
+        </div>
+    </div>
+</div>
+
+<script src="/js/branch.js" ></script>
+
+</body>
+</html>

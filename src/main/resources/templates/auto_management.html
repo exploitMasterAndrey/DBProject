@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление машинами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .container{
+            box-sizing: content-box;
+            background-color: rgba(255,255,255,0.13);
+
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 35px 35px;
+
+            margin-bottom: 40px;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center><h5>Управление машинами</h5></center>
+        <div class="card">
+            <h5 class="card-header">Удаление</h5>
+            <div class="card-body">
+                <p class="card-text">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">ID машины</span>
+                        <input id="deleteAutoInput" type="text" class="form-control" placeholder="id" aria-describedby="addon-wrapping">
+                    </div>
+                </p>
+                <a class="btn btn-danger" onclick="delete_auto()">Удалить</a>
+            </div>
+        </div><br>
+
+        <div class="card">
+            <h5 class="card-header">Добавление</h5>
+            <div class="card-body">
+                <p class="card-text">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping1">ID клиента</span>
+                        <input id="clientIDInput" type="text" class="form-control" placeholder="id" aria-describedby="addon-wrapping1">
+                    </div><br>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping2">Марка</span>
+                        <input id="autoBrandInput" type="text" class="form-control" placeholder="BMW" aria-describedby="addon-wrapping2">
+                    </div><br>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping3">Год выпуска</span>
+                        <input id="autoYearInput" type="text" class="form-control" placeholder="2000" aria-describedby="addon-wrapping3">
+                    </div><br>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping4">Кузов</span>
+                        <input id="autoTypeInput" type="text" class="form-control" placeholder="седан" aria-describedby="addon-wrapping4">
+                    </div>
+                </p>
+                <a class="btn btn-success" onclick="add_auto()">Добавить</a>
+            </div>
+        </div><br>
+
+        <div class="card">
+            <h5 class="card-header">Обновление</h5>
+            <div class="card-body">
+                <p class="card-text">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping5">ID машины</span>
+                    <input id="autoIDInput" type="text" class="form-control" placeholder="id" aria-describedby="addon-wrapping5">
+                </div><br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping9">ID клиента</span>
+                    <input id="newClientIDInput" type="text" class="form-control" placeholder="id" aria-describedby="addon-wrapping9">
+                </div><br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping6">Марка</span>
+                    <input id="newAutoBrandInput" type="text" class="form-control" placeholder="BMW" aria-describedby="addon-wrapping6">
+                </div><br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping7">Год выпуска</span>
+                    <input id="newAutoYearInput" type="text" class="form-control" placeholder="2000" aria-describedby="addon-wrapping7">
+                </div><br>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping8">Кузов</span>
+                    <input id="newAutoTypeInput" type="text" class="form-control" placeholder="седан" aria-describedby="addon-wrapping8">
+                </div>
+                </p>
+                <a class="btn btn-warning" onclick="update_auto()">Обновить</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/auto.js" ></script>
+</body>
+</html>
