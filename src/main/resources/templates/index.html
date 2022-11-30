@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Проект</title>
@@ -29,7 +29,7 @@
 <body>
 
 <div class="container">
-    <center><h5>Машины</h5></center>
+    <center><h5>Машины  <a type="button" class="btn btn-primary" th:href="@{/management/auto}">Редактировать</a></h5></center>
     <table class="table">
         <thead>
         <tr>
@@ -46,7 +46,7 @@
 </div>
 
 <div class="container">
-    <center><h5>Клиенты</h5></center>
+    <center><h5>Клиенты <a type="button" class="btn btn-primary" th:href="@{/management/client}">Редактировать</a></h5></center>
     <table class="table">
         <thead>
         <tr>
@@ -64,7 +64,7 @@
 </div>
 
 <div class="container">
-    <center><h5>Заявки</h5></center>
+    <center><h5>Заявки <a type="button" class="btn btn-primary" th:href="@{/management/request}">Редактировать</a></h5></center>
     <table class="table">
         <thead>
         <tr>
@@ -81,7 +81,7 @@
 </div>
 
 <div class="container">
-    <center><h5>Работники</h5></center>
+    <center><h5>Работники <a type="button" class="btn btn-primary" th:href="@{/management/worker}">Редактировать</a></h5></center>
     <table class="table">
         <thead>
         <tr>
@@ -103,7 +103,7 @@
 </div>
 
 <div class="container">
-    <center><h5>Филиалы</h5></center>
+    <center><h5>Филиалы <a type="button" class="btn btn-primary" th:href="@{/management/branch}">Редактировать</a></h5></center>
     <table class="table">
         <thead>
         <tr>
@@ -118,7 +118,7 @@
 </div>
 
 <div class="container">
-    <center><h5>Поставщики</h5></center>
+    <center><h5>Поставщики  <a type="button" class="btn btn-primary" th:href="@{/management/provider}">Редактировать</a></h5></center>
     <table class="table">
         <thead>
         <tr>
